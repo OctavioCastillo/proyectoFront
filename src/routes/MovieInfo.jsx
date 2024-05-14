@@ -25,7 +25,6 @@ const MovieInfo = () => {
       {movie ? (
         <div>
           <h1>{movie.title}</h1>
-          {/* Mostrar más información sobre la película */}
         </div>
       ) : (
         <div>Cargando...</div>

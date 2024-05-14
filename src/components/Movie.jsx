@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; 
 import getMovies from "../functions/getMovies";
+import { movieInfoRoute } from "../main";
 
 const Movie = () => {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,6 +19,14 @@ const Movie = () => {
 
     fetchData();
   }, []);
+
+  const getMovieId = (id) => {
+    const path = movieInfoRoute.path.split('/')
+    // Guarda el _id de la película seleccionada en localStorage
+    localStorage.setItem("selectedMovieId", id);
+    // Redirige al usuario a movieInfoRoute.path con el _id adjunto
+    navigate(`/${path[1]}/${id}`);
+  };
 
   return (
     <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
@@ -32,7 +43,8 @@ const Movie = () => {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{movie.title}</h5>
-                  <button className="btn btn-danger mt-auto mb-2">Ver más</button>
+                  {/* Agrega el evento onClick para manejar el clic en el botón "Ver más" */}
+                  <button onClick={() => getMovieId(movie._id)} className="btn btn-danger mt-auto mb-2">Ver más</button>
                 </div>
               </div>
             </div>

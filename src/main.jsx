@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+//import App from './App.jsx';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './routes/Login.jsx';
@@ -10,7 +10,7 @@ import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import MovieInfo from './routes/MovieInfo.jsx';
 
 export const movieInfoRoute = {
-  path: '/movieInfo',
+  path: '/movieInfo/:id',
   element: <MovieInfo />,
   errorElement: <div>Error componente MovieInfo</div>
 }
