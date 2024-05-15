@@ -9,6 +9,7 @@ import Dashboard from './routes/Dashboard.jsx';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import MovieInfo from './components/MovieInfo.jsx';
 import MovieDoc from './routes/MoviePage.jsx';
+import NewComment from './routes/NewComment.jsx';
 
 export const movieInfoRoute = {
   path: '/movieInfo/:id',
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
     path: '/register',
     element: < Register />,
     errorElement: <div>Error componente register</div>
+  },
+  {
+    path: '/newComment',
+    element: < NewComment />,
+    errorElement : <div>Error componenete NewComment</div>
   },
   {
     path: '/login',

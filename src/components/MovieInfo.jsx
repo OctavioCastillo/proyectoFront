@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import getMovies from '../functions/getMovies';
 import Comment from './Comment';
 import Navbar from './Navbar';
+import NewCommentButton from './CreateComment';
 
 const MovieInfo = () => {
   const { id } = useParams(); // Obtener el ID de la película de la URL
@@ -43,11 +44,13 @@ const MovieInfo = () => {
                 <h3>Director: {movie.director}</h3>
                 <h3>{movie.year}</h3>
                 <p>{movie.sinopsis}</p>
+                <h4>Calificación: {movie.score}</h4>
               </div>
             </div>
             <div className='d-flex'>
               <div className='justify-content-center'>
                 <h3 className='justify-content-center mt-5 ms-3'>Comentarios</h3>
+                < NewCommentButton />
                 < Comment /> 
               </div>
             </div>

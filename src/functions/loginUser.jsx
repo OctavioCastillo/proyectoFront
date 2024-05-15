@@ -15,6 +15,7 @@ const loginUser = async (email, password) => {
         const data = await response.json();
         return data;
       } else {
+        alert ('Credenciales inválidas!');
         throw new Error('Error al iniciar sesión');
       }
     } catch (error) {

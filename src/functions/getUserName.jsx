@@ -9,6 +9,7 @@ const getName = async (id) => {
       const userData = await response.json();
       // Verifica si hay algún usuario en la respuesta
       if (userData.length > 0) {
+        console.log(userData)
         // Devuelve el nombre del primer usuario en el array
         return userData[0].name;
       } else {
