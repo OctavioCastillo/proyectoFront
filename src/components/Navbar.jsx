@@ -1,14 +1,24 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate('/');
+  };
+
+  const goToLogin = () => {
+    navigate('/login');
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
-      <div className="container">
-        <Link to="/" className="navbar-brand">Inicio</Link>
-        <div className="collapse navbar-collapse justify-content-end">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/login" className="nav-link">Login</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+      <div className="container bg-danger">
+        <button className="navbar-brand btn btn-link bg-danger ps-5" onClick={goToHome}>Inicio</button>
+        <div className="collapse navbar-collapse justify-content-end bg-danger">
+          <ul className="navbar-nav bg-danger">
+            <li className="nav-item bg-danger">
+              <button className="nav-link btn btn-link bg-danger pe-5" onClick={goToLogin}>Login</button>
             </li>
           </ul>
         </div>

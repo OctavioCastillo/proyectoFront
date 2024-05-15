@@ -1,7 +1,11 @@
 import MovieInfo from "../components/MovieInfo";
 
-const Dashboard = () => {
-    return <MovieInfo />;
+const MovieDoc = () => {
+    return (
+        <>
+        < MovieInfo />
+        </>
+    );
 };
 
-export default Dashboard;
+export default MovieDoc;

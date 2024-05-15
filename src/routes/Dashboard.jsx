@@ -1,7 +1,12 @@
 import Movie from "../components/Movie"; 
+import Navbar from "../components/Navbar";
 
 const Dashboard = () => {
-    return <Movie />;
+    return (
+        <>
+            < Navbar />,
+            < Movie />;
+        </>)
 };
 
 export default Dashboard;

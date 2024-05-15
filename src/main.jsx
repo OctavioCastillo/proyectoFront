@@ -8,6 +8,7 @@ import Register from './routes/Register.jsx';
 import Dashboard from './routes/Dashboard.jsx';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import MovieInfo from './components/MovieInfo.jsx';
+import MovieDoc from './routes/MoviePage.jsx';
 
 export const movieInfoRoute = {
   path: '/movieInfo/:id',
@@ -15,12 +16,14 @@ export const movieInfoRoute = {
   errorElement: <div>Error componente MovieInfo</div>
 }
 
-const router = createBrowserRouter([
-  {
-    path: '/',
+export const dashboard ={
+  path: '/',
     element: < Dashboard />,
     errorElement: <div>Error componente dashboard</div>
-  },
+}
+
+const router = createBrowserRouter([
+  dashboard,
   {
     path: '/register',
     element: < Register />,
@@ -32,6 +35,11 @@ const router = createBrowserRouter([
     errorElement: <div>Error componente login</div>
   },
   movieInfoRoute,
+  {
+    path: 'movieInfo',
+    element: < MovieDoc />,
+    errorElement: <div>Error componente MovieDoc</div>
+  },
   {
     path: '/',
     element: <ProtectedRoute />,

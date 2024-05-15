@@ -44,9 +44,9 @@ const Comment = () => {
     <div className='container my-5'>
     {comments ? (
         comments.map(comment => (
-        <div key={comment._id} className='d-flex border border-danger border-2 w-100 rounded' style={{minHeight: '50px'}}>
+        <div key={comment._id} className='d-flex border border-danger border-2 w-100 rounded mb-3' style={{minHeight: '50px'}}>
             <div className='align-items-center justify-content-center mx-5  border-end border-white'>
-                <div className='pe-5 pt-3'>
+                <div className='pe-5 pt-3' style={{minWidth: '180px'}}>
                     <UserName userId={comment.user} />
                 </div>
             </div>

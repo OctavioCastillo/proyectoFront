@@ -1,3 +1,11 @@
+import Navbar from "../components/Navbar";
+import RegisterForm from "../components/RegisterFrom";
+
 export default function Register(){
-    return <h1>Register</h1>
+    return (
+        <>
+        < Navbar />
+        < RegisterForm />
+        </>
+    )
 }

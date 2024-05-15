@@ -1,3 +1,13 @@
-export default function Login(){
-    return <h1>Login</h1>
+import LoginForm from "../components/LoginForm";
+import Navbar from "../components/Navbar";
+
+const Login = () => {
+    return(
+        <>
+        < Navbar />
+        < LoginForm />
+        </>
+    )
 }
+
+export default Login
