@@ -29,7 +29,7 @@ const Movie = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+    <div className="d-flex justify-content-center align-items-center pt-3" style={{ minHeight: "100vh" }}>
       <div className="container">
         <div className="row justify-content-center mx-auto">
           {movies.map(movie => (
@@ -43,7 +43,6 @@ const Movie = () => {
                 />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{movie.title}</h5>
-                  {/* Agrega el evento onClick para manejar el clic en el botón "Ver más" */}
                   <button onClick={() => getMovieId(movie._id)} className="btn btn-danger mt-auto mb-2">Ver más</button>
                 </div>
               </div>

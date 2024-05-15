@@ -7,7 +7,7 @@ import Login from './routes/Login.jsx';
 import Register from './routes/Register.jsx';
 import Dashboard from './routes/Dashboard.jsx';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
-import MovieInfo from './routes/MovieInfo.jsx';
+import MovieInfo from './components/MovieInfo.jsx';
 
 export const movieInfoRoute = {
   path: '/movieInfo/:id',
