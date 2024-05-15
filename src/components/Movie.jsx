@@ -29,7 +29,7 @@ const Movie = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center pt-3" style={{ minHeight: "100vh" }}>
+    <div className="d-flex justify-content-center align-items-center pt-4" style={{ minHeight: "100vh" }}>
       <div className="container">
         <div className="row justify-content-center mx-auto">
           {movies.map(movie => (

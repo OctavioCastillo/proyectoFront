@@ -23,7 +23,7 @@ const MovieInfo = () => {
   }, [id]);
 
   return (
-    <div className='d-flex container' style={{ backgroundColor: 'black', color: 'white' }}> {/* Cambiar el color de fondo y el color del texto */}
+    <div className='d-flex container pt-5' style={{ backgroundColor: 'black', color: 'white' }}> {/* Cambiar el color de fondo y el color del texto */}
       {movie ? (
         <div className='justify-content-evenly'>
           <h1 className='text-capitalize text-center'>{movie.title}</h1>
@@ -36,15 +36,17 @@ const MovieInfo = () => {
                 style={{ width: '18rem', height: '400px' }} // Establecer el tamaño de la imagen
               />
             </div>
-            <div className="col-md-6 mt-4">
+            <div className="col-md-6 pt-4">
               <h3>Director: {movie.director}</h3>
               <h3>{movie.year}</h3>
               <p>{movie.sinopsis}</p>
             </div>
           </div>
-          <div className='mx-auto'>
-            <h3 className='mt-5'>Comentarios</h3>
-            < Comment /> 
+          <div className='d-flex'>
+            <div className='justify-content-center'>
+              <h3 className='justify-content-center mt-5'>Comentarios</h3>
+              < Comment /> 
+            </div>
           </div>
         </div>
       ) : (

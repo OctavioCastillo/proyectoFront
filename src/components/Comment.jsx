@@ -41,21 +41,24 @@ const Comment = () => {
   }, [movie]); 
 
   return (
-    <div>
-      {comments ? (
+    <div className='container my-5'>
+    {comments ? (
         comments.map(comment => (
-          <div key={comment._id}>
-            <div>
-              <UserName userId={comment.user} />
+        <div key={comment._id} className='d-flex border border-danger border-2 w-100 rounded' style={{minHeight: '50px'}}>
+            <div className='align-items-center justify-content-center mx-5  border-end border-white'>
+                <div className='pe-5 pt-3'>
+                    <UserName userId={comment.user} />
+                </div>
             </div>
-            <div>
-              {comment.comment}
+            <div style={{minWidth: '400px'}} className='mx-5 py-2'>
+                {comment.comment}
+                <div>Calificación: {comment.score}</div>
             </div>
-          </div>
+        </div>
         ))
-      ) : (
+    ) : (
         <div>Cargando comentarios...</div>
-      )}
+    )}
     </div>
   );
 };
