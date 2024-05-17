@@ -7,7 +7,6 @@ const getComments = async (id) => {
 
     if (response.ok) {
       const comments = await response.json();
-      console.log(comments);
       return comments;
     } else {
       throw new Error('Error al obtener los comentarios: No se pudo obtener una respuesta exitosa de la API.');

@@ -50,7 +50,7 @@ const Comment = () => {
                     <UserName userId={comment.user} />
                 </div>
             </div>
-            <div style={{minWidth: '400px'}} className='mx-5 py-2'>
+            <div style={{minWidth: '720px'}} className='mx-5 py-2'>
                 {comment.comment}
                 <div>Calificación: {comment.score}</div>
             </div>

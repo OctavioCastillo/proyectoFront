@@ -74,7 +74,7 @@ const MovieForm = () => {
     <>
       <Navbar />
       <div className="d-flex justify-content-center align-items-center mt-1 mb-5" style={{ minHeight: '100vh', backgroundColor: '#000', color: 'white' }}>
-        <div className="container-sm border border-danger" style={{ minHeight: '80vh', maxWidth: '50vw' }}>
+        <div className="container-sm border border-danger rounded" style={{ minHeight: '80vh', maxWidth: '50vw' }}>
           <h2 className="text-center mb-4 mt-3">Ingresa los datos de la película</h2>
           <form>
             <div className="mb-3">

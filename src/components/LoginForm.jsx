@@ -38,7 +38,7 @@ const LoginForm = () => {
   return (
     <>
       <div className="d-flex justify-content-center align-items-center mt-1" style={{ minHeight: '100vh', backgroundColor: '#000', color: 'white' }}>
-        <div className="container-sm border border-danger m-auto" style={{ maxHeight: '60vh', maxWidth: '30vw' }}>
+        <div className="container-sm border border-danger m-auto rounded" style={{ maxHeight: '60vh', maxWidth: '30vw' }}>
           <h2 className="text-center mb-4 mt-3">Ingresa tus datos</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">

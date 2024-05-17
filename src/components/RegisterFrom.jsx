@@ -28,7 +28,7 @@ const RegisterForm = () => {
     <>
       <Navbar />
       <div className="d-flex justify-content-center align-items-center mt-1" style={{ minHeight: '100vh', backgroundColor: '#000', color: 'white' }}>
-        <div className="container-sm border border-danger" style={{ maxHeight: '80vh', maxWidth: '30vw' }}>
+        <div className="container-sm border border-danger rounded" style={{ maxHeight: '80vh', maxWidth: '30vw' }}>
           <h2 className="text-center mb-4 mt-3">Ingresa tus datos</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
