@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import LoginForm from "../components/LoginForm";
 import Navbar from "../components/Navbar";
 
@@ -6,6 +7,7 @@ const Login = () => {
         <>
         < Navbar />
         < LoginForm />
+        < Footer />
         </>
     )
 }

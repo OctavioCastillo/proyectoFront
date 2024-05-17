@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import NewCommentForm from "../components/NewCommentForm"
 
@@ -6,6 +7,7 @@ const NewComment = () => {
         <>
         < Navbar />
         < NewCommentForm />
+        < Footer />
         </>
     )
 }

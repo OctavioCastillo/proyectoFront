@@ -11,3 +11,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+h2, h3, p{
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}

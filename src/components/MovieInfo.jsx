@@ -4,6 +4,7 @@ import getMovies from '../functions/getMovies';
 import Comment from './Comment';
 import Navbar from './Navbar';
 import NewCommentButton from './CreateComment';
+import Footer from './Footer';
 
 const MovieInfo = () => {
   const { id } = useParams(); // Obtener el ID de la película de la URL
@@ -55,10 +56,12 @@ const MovieInfo = () => {
               </div>
             </div>
           </div>
+
         ) : (
           <div className='text-center'>Cargando...</div>
         )}
       </div>
+      < Footer />
     </>
   );
 };
