@@ -6,10 +6,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './routes/Login.jsx';
 import Register from './routes/Register.jsx';
 import Dashboard from './routes/Dashboard.jsx';
-import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import MovieInfo from './components/MovieInfo.jsx';
 import MovieDoc from './routes/MoviePage.jsx';
 import NewComment from './routes/NewComment.jsx';
+import ManageMovies from './routes/ManageMoviesRoute.jsx';
 
 export const movieInfoRoute = {
   path: '/movieInfo/:id',
@@ -47,15 +47,10 @@ const router = createBrowserRouter([
     errorElement: <div>Error componente MovieDoc</div>
   },
   {
-    path: '/',
-    element: <ProtectedRoute />,
-    children: [
-      {
-        path: '/',
-        element: < Dashboard />
-      },
-    ],
-  },
+    path: '/manageMovies',
+    element: < ManageMovies />,
+    errorElement: <div>Error componenete ManageMovies</div>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

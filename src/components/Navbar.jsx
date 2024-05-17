@@ -7,8 +7,19 @@ const Navbar = () => {
     navigate('/');
   };
 
-  const goToLogin = () => {
-    navigate('/login');
+  const handleLoginLogout = () => {
+    const userId = localStorage.getItem('user_id');
+
+    if (userId) {
+      // Si el usuario está autenticado (user_id presente en localStorage), hacer logout
+      localStorage.removeItem('user_id');
+      localStorage.removeItem('is_admin');
+      localStorage.removeItem('user_token');
+      navigate('/login');
+    } else {
+      // Si el usuario no está autenticado, redirigir a la página de login
+      navigate('/login');
+    }
   };
 
   return (
@@ -18,7 +29,9 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-end bg-danger">
           <ul className="navbar-nav bg-danger">
             <li className="nav-item bg-danger">
-              <button className="nav-link btn btn-link bg-danger pe-5" onClick={goToLogin}>Login</button>
+              <button className="nav-link navbar-brand btn btn-link bg-danger pe-5" onClick={handleLoginLogout}>
+                {localStorage.getItem('user_id') ? 'Logout' : 'Login'}
+              </button>
             </li>
           </ul>
         </div>

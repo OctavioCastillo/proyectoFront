@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import loginUser from '../functions/loginUser';
+import getUserData from '../functions/getUserData'; 
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -16,6 +17,11 @@ const LoginForm = () => {
       
       // Guarda el token en el localStorage
       localStorage.setItem('user_token', userData.token);
+
+      // Llama a getUserData y guarda los datos necesarios en el localStorage
+      const userDataResponse = await getUserData();
+      localStorage.setItem('user_id', userDataResponse._id);
+      localStorage.setItem('is_admin', userDataResponse.esAdmin);
 
       // Redirige al usuario a la página principal
       navigate('/');

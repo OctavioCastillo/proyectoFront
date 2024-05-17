@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import getMovies from "../functions/getMovies";
 import { movieInfoRoute } from "../main";
 import Navbar from "./Navbar";
+import ManageButton from "./MovieManagement.Button";
 
 const Movie = () => {
   const [movies, setMovies] = useState([]);
@@ -35,6 +36,7 @@ const Movie = () => {
       <div className="d-flex justify-content-center align-items-center pt-0" style={{ minHeight: "80vh" }}>
         <div className="container">
           <h1 className="mb-4 text-start text-danger ms-3">Mis Películas</h1>
+          < ManageButton />
           <div className="row justify-content-center mx-auto">
             {movies.map(movie => (
               <div key={movie._id} className="col-md-3 mb-2">
